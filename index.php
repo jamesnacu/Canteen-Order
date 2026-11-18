@@ -1,0 +1,33 @@
+<?php
+//Name: Nacu, James P.
+//Section: WD-201
+
+//INCLUDE:
+include 'header.php';
+include 'menu.php';
+?>
+
+<h2>Place Your Order</h2>
+<form method = "POST" action = "process.php">
+<label>Name</label><input name = "customer_name" required>
+<label>Customer Type</label>
+<select name = "customer_type">
+<option value = "student">Student</option>
+<option value = "employee">Employee</option>
+<option value = "guest">Guest</option>
+</select>
+<label>Product</label>
+<select name="product">
+    <option value = "M1">Chicken Adobo Meal</option>
+    <option value = "M2">Pork Sisig Meal</option>
+    <option value = "M3">Vegetable Meal Meal</option>
+    <option value = "M4">Bottled Water</option>
+    <option value = "M5">Iced Tea</option>
+</select>
+<label>Quantity</label>
+<input name="quantity" type= "number" min = "1" max = "10" required>
+<label>Budget (PHP)</label>
+<input name = "budget" type = "number" min = "0" step = "0.01" required>
+<button type="submit">Process Order</button>
+</form>
+<?php include 'footer.php'; ?>
