@@ -27,7 +27,7 @@ if (!$valid) {
 }
 
 // PHP 8 match expression: each arm returns a product record.
-$item = match (Sproduet) {
+$item = match ($product) {
     'M1' => ['Chicken Adobo Meal', 85, true],
     'M2' => ['Pork Sisig Meal', 100, true],
     'M3' => ['Vegetable Meal', 70, true],
@@ -53,7 +53,7 @@ echo '<p>Customer: ' . htmlspecialchars($name, ENT_QUOTES, 'UTF-8') . '</p>';
 echo '<p>Customer type: ' . htmlspecialchars(ucfirst($type)) . '</p>';
 echo '<h3>Items Ordered</h3>';
 for ($i = 1; $i <= $quantity; $i++) {
-    echo '<p>' . $i . '. ' . htmlspecialchars($productNane) .
+    echo '<p>' . $i . '. ' . htmlspecialchars($productName) .
         ' - PHP ' . number_format($price, 2) . '</p>';
 }
 echo '<p>Subtotal: PHP ' . number_format($subtotal, 2) . '</p>';
@@ -61,10 +61,10 @@ echo '<p>Discount: PHP ' . number_format($discount, 2) . '</p>';
 echo '<h2>Final Bill: PHP ' . number_format($total, 2) . '</h2>';
 echo '<p>Budget: PHP ' . number_format($budget, 2) . '</p>';
 if ($budget >= $total) {
-    echo '<p class="success">Budget is sufficient !</p>';
+    echo '<p class="success">Budget is sufficient!</p>';
     echo '<p>Balance: PHP ' . number_format($budget - $total, 2) . '</p>';
 } else {
-    echo '<p class="error">Insufficient budget !< /p>';
+    echo '<p class="error">Insufficient budget!< /p>';
     echo '<p>Shortage: PHP ' . number_format($total - $budget, 2) . '</p>';
 }
 echo '<h3>Preparation Progress</h3>';

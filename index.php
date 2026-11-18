@@ -21,8 +21,8 @@ include 'menu.php';
     <option value = "M1">Chicken Adobo Meal</option>
     <option value = "M2">Pork Sisig Meal</option>
     <option value = "M3">Vegetable Meal Meal</option>
-    <option value = "M4">Bottled Water</option>
-    <option value = "M5">Iced Tea</option>
+    <option value = "D1">Bottled Water</option>
+    <option value = "D2">Iced Tea</option>
 </select>
 <label>Quantity</label>
 <input name="quantity" type= "number" min = "1" max = "10" required>
