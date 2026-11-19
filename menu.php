@@ -1,35 +1,25 @@
+<?php
+$menu = [
+    'M1' => ['name' => 'Chicken Adobo Meal', 'price' => 85.00, 'is_food' => true],
+    'M2' => ['name' => 'Pork Sisig Meal', 'price' => 100.00, 'is_food' => true],
+    'M3' => ['name' => 'Vegetable Meal', 'price' => 70.00, 'is_food' => true],
+    'D1' => ['name' => 'Bottled Water', 'price' => 20.00, 'is_food' => false],
+    'D2' => ['name' => 'Iced Tea', 'price' => 35.00, 'is_food' => false]
+];
+?>
 
 <h2>Available Menu</h2>
-
 <table>
     <tr>
         <th>Code</th>
         <th>Product</th>
         <th>Price</th>
     </tr>
-    <tr>
-        <td>M1</td>
-        <td>Chicken Adobo Meal</td>
-        <td>₱85.00</td>
-    </tr>
-    <tr>
-        <td>M2</td>
-        <td>Pork Sisig Meal</td>
-        <td>₱100.00</td>
-    </tr>
-    <tr>
-        <td>M3</td>
-        <td>Vegetable Meal</td>
-        <td>₱70.00</td>
-    </tr>
-    <tr>
-        <td>D1</td>
-        <td>Bottled Water</td>
-        <td>₱20.00</td>
-    </tr>
-    <tr>
-        <td>D2</td>
-        <td>Iced Tea</td>
-        <td>₱35.00</td>
-    </tr>
+    <?php foreach ($menu as $code => $item): ?>
+        <tr>
+            <td><?php echo htmlspecialchars($code); ?></td>
+            <td><?php echo htmlspecialchars($item['name']); ?></td>
+            <td>₱<?php echo number_format($item['price'], 2); ?></td>
+        </tr>
+    <?php endforeach; ?>
 </table>
