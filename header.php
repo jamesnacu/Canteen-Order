@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,17 +7,23 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background: #f4f6f8;
+            background: #ffffff;
             margin: 0;
             padding: 20px;
+            color: #e6e6e6;
         }
 
         .container {
             max-width: 650px;
             margin: auto;
-            background: white;
+            background: #1e1e1e;
             padding: 25px;
             border-radius: 10px;
+        }
+
+        .header {
+            background: #F50;
+            padding: 15px;
         }
 
         input, select, button {
@@ -29,7 +34,7 @@
         }
 
         button {
-            background: #165b43;
+            background: #A00;
             color: white;
             border: none;
             cursor: pointer;
@@ -48,10 +53,31 @@
 
         .success { color: green; }
         .error { color: red; }
+
+        .navigation {
+            margin-bottom: 20px;
+        }
+
+        .navigation a {
+            margin-right: 15px;
+            color: #A00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navigation a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 <div class="container">
-    <h1>Campus Canteen</h1>
-    <p>Student Ordering and Discount System</p>
+    <div class = "header">
+        <h1>Campus Canteen</h1>
+        <p>Student Ordering and Discount System</p>
+    </div>
     <hr>
+    <nav class="navigation">
+        <a href="index.php">Order</a>
+        <a href="stock.php">Stock Monitoring</a>
+    </nav>
